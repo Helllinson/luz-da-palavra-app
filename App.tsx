@@ -6,7 +6,7 @@ import { Share } from "@capacitor/share";
 import { GoogleGenAI } from "@google/genai";
 import { AppScreen, UserProgress, DayNote, CheckIn, DevotionalDay, Volume, QuickNote, Entitlements } from './types';
 import { VOLUMES, STATUS_GRADIENTS } from './constants';
-import { requestNotificationPermission, checkNotificationStatus } from './services/notifications';
+import { requestNotificationPermission, checkNotificationStatus } from './notifications';
 
 
 
@@ -1488,4 +1488,5 @@ const NotesScreen: React.FC<any> = ({ dayData, note, onSave, onBack }) => (
     </div>
     <Button onClick={onBack} className="w-full mt-10 h-16 shadow-lg">Salvar e Voltar</Button>
   </div>
+
 );
