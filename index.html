@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="manifest" href="/manifest.json" />
+<meta name="theme-color" content="#E11D48" />
+<link rel="apple-touch-icon" href="/icon-192.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Luz da Palavra" />
+    <title>Luz da Palavra</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Noto+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'soul-beige': '#FFFFFF',
+              'soul-cream': '#F7F7F7',
+              'soul-green-soft': '#F0F5F2', 
+              'soul-green-deep': '#1F4D3A', 
+              'soul-accent': '#E11D48',
+              'soul-accent-dark': '#BE123C',
+              'soul-border': '#EAEAEA',
+              'soul-text': '#222222',
+              'soul-muted': '#717171'
+            },
+            fontFamily: {
+              serif: ['Newsreader', 'serif'],
+              sans: ['Noto Sans', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        --app-fs: 16px;
+      }
+      html {
+        font-size: var(--app-fs);
+      }
+      body {
+        background-color: #FFFFFF;
+        color: #222222;
+        font-family: 'Noto Sans', sans-serif;
+        -webkit-tap-highlight-color: transparent;
+        overflow-x: hidden;
+      }
+      .font-serif {
+        font-family: 'Newsreader', serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .fill-1 {
+        font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      @keyframes fade-in {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in {
+        animation: fade-in 0.4s ease-out forwards;
+      }
+      @keyframes slide-up {
+        from { opacity: 0; transform: translateY(100%) translateX(-50%); }
+        to { opacity: 1; transform: translateY(0) translateX(-50%); }
+      }
+      .animate-slide-up {
+        animation: slide-up 0.3s ease-out forwards;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
